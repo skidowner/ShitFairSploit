@@ -1,0 +1,488 @@
+<Window
+	x:Class="Unknowproject.UnfairSploit" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Unknowproject" xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit" xmlns:CodeCompletion="clr-namespace:ICSharpCode.AvalonEdit.CodeCompletion;assembly=ICSharpCode.AvalonEdit"
+	Title="UnfairSploit"
+	Height="412"
+	Width="890.5"
+	AllowsTransparency="True"
+	WindowStyle="None"
+	Background="#00FFFFFF"
+	BorderThickness="0"
+	WindowStartupLocation="CenterScreen"
+	AllowDrop="True"
+	ResizeMode="NoResize"
+	Icon="new epic.jpg"
+	Topmost="True">
+	<Grid
+		Name="Gridl"
+		Margin="10,0,-2,0"
+		MouseDown="Grid_MouseDown"
+		Loaded="Gridl_Loaded">
+		<Border
+			Name="Main"
+			BorderBrush="#FF000000"
+			BorderThickness="0"
+			HorizontalAlignment="Left"
+			Height="336"
+			Margin="154,36,0,0"
+			VerticalAlignment="Top"
+			Width="494"
+			Background="#151515"
+			Loaded="Main_Loaded"
+			MouseDown="Main_MouseDown">
+			<UIElement.Effect>
+				<DropShadowEffect
+					BlurRadius="50" />
+			</UIElement.Effect>
+			<Border
+				BorderBrush="#FF000000"
+				BorderThickness="0"
+				HorizontalAlignment="Left"
+				Height="102"
+				VerticalAlignment="Top"
+				Width="494"
+				Background="#161616">
+				<Label
+					Name="Unfa"
+					Content="UnfairSploit"
+					HorizontalAlignment="Left"
+					Height="36"
+					VerticalAlignment="Top"
+					Width="120"
+					Foreground="#FFFFFFFF"
+					FontSize="20"
+					Margin="38,8,-541,0" />
+			</Border>
+		</Border>
+		<Button
+			Name="Execute"
+			Content=""
+			HorizontalAlignment="Left"
+			Margin="163,91,0,0"
+			VerticalAlignment="Top"
+			Width="43"
+			Height="42"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontFamily="Segoe MDL2 Assets"
+			FontSize="20"
+			AutomationProperties.HelpText="Execute"
+			AutomationProperties.IsOffscreenBehavior="Onscreen"
+			AutomationProperties.IsRequiredForForm="True"
+			AutomationProperties.Name="Execute"
+			Style="{StaticResource SystemButton}"
+			Click="Execute_Click"
+			Loaded="Execute_Loaded">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Execute" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Button
+			Name="Clear"
+			Content=""
+			HorizontalAlignment="Left"
+			Margin="209,91,0,0"
+			VerticalAlignment="Top"
+			Width="43"
+			Height="42"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontFamily="Segoe MDL2 Assets"
+			FontSize="20"
+			AutomationProperties.HelpText="Clear"
+			AutomationProperties.IsOffscreenBehavior="Onscreen"
+			AutomationProperties.IsRequiredForForm="True"
+			AutomationProperties.Name="Clear"
+			Style="{StaticResource SystemButton}"
+			Click="Clear_Click"
+			Loaded="Clear_Loaded">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Clear" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Button
+			Name="Open"
+			Content=""
+			HorizontalAlignment="Left"
+			Margin="255,91,0,0"
+			VerticalAlignment="Top"
+			Width="43"
+			Height="42"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontFamily="Segoe MDL2 Assets"
+			FontSize="20"
+			AutomationProperties.HelpText="Open File"
+			AutomationProperties.IsRequiredForForm="True"
+			AutomationProperties.IsOffscreenBehavior="Onscreen"
+			AutomationProperties.Name="Open File"
+			Style="{StaticResource SystemButton}"
+			Click="Open_Click"
+			Loaded="Open_Loaded">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Open File" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Button
+			Name="Save"
+			Content=""
+			HorizontalAlignment="Left"
+			Margin="301,91,0,0"
+			VerticalAlignment="Top"
+			Width="43"
+			Height="42"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontFamily="Segoe MDL2 Assets"
+			FontSize="20"
+			AutomationProperties.HelpText="Save File"
+			AutomationProperties.IsOffscreenBehavior="Onscreen"
+			AutomationProperties.IsRequiredForForm="True"
+			AutomationProperties.Name="Save File"
+			Style="{StaticResource SystemButton}"
+			Click="Save_Click"
+			Loaded="Save_Loaded">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Save File" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Button
+			Name="Inject"
+			Content=""
+			HorizontalAlignment="Left"
+			Margin="347,91,0,0"
+			VerticalAlignment="Top"
+			Width="43"
+			Height="42"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontFamily="Segoe MDL2 Assets"
+			FontSize="20"
+			AutomationProperties.HelpText="Inject"
+			AutomationProperties.IsRequiredForForm="True"
+			AutomationProperties.IsOffscreenBehavior="Onscreen"
+			AutomationProperties.Name="Inject"
+			Style="{StaticResource SystemButton}"
+			Click="Inject_Click"
+			Loaded="Inject_Loaded">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Inject" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Button
+			Name="Setting"
+			Content=""
+			HorizontalAlignment="Left"
+			Margin="600,90,0,0"
+			VerticalAlignment="Top"
+			Width="43"
+			Height="42"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontFamily="Segoe MDL2 Assets"
+			FontSize="20"
+			AutomationProperties.HelpText="Setting"
+			AutomationProperties.IsRequiredForForm="True"
+			AutomationProperties.IsOffscreenBehavior="Onscreen"
+			AutomationProperties.Name="Setting"
+			Style="{StaticResource SystemButton}"
+			Click="Setting_Click"
+			Loaded="Setting_Loaded">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Setting" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Button
+			Name="gamehum"
+			Content=""
+			HorizontalAlignment="Left"
+			Margin="553,90,0,0"
+			VerticalAlignment="Top"
+			Width="43"
+			Height="42"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontFamily="Segoe MDL2 Assets"
+			FontSize="20"
+			AutomationProperties.HelpText="Game Hub"
+			AutomationProperties.IsOffscreenBehavior="Onscreen"
+			AutomationProperties.IsRequiredForForm="True"
+			AutomationProperties.Name="Game Hub"
+			Style="{StaticResource SystemButton}"
+			Click="gamehum_Click"
+			Loaded="gamehum_Loaded">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Script Hub" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Ellipse
+			Name="ico"
+			HorizontalAlignment="Left"
+			Height="36"
+			Margin="160,42,0,0"
+			Stroke="#FF000000"
+			VerticalAlignment="Top"
+			Width="36">
+			<Shape.Fill>
+				<ImageBrush
+					ImageSource="new epic.jpg" />
+			</Shape.Fill>
+		</Ellipse>
+		<ListBox
+			Name="List"
+			HorizontalAlignment="Left"
+			Height="193"
+			Margin="541,173,0,0"
+			VerticalAlignment="Top"
+			Width="102"
+			BorderThickness="0"
+			Background="#181818"
+			Foreground="#FFFFFFFF"
+			IsSynchronizedWithCurrentItem="False"
+			Loaded="List_Loaded"
+			SelectionChanged="List_SelectionChanged" />
+		<TextBox
+			Name="Search"
+			HorizontalAlignment="Left"
+			Height="24"
+			Margin="541,146,0,0"
+			TextWrapping="Wrap"
+			Text="Search Here"
+			VerticalAlignment="Top"
+			Width="102"
+			BorderThickness="0"
+			Background="#191919"
+			Foreground="#FFFFFFFF"
+			FontSize="15"
+			TextChanged="Search_TextChanged" />
+		<TabControl
+			Name="EditTabs"
+			Background="#161616"
+			BorderThickness="0"
+			Style="{StaticResource Tabs}"
+			Margin="163,146,349,0"
+			Height="220"
+			VerticalAlignment="Top"
+			SelectionChanged="EditTabs_SelectionChanged">
+			<TabItem
+				Name="MainTab"
+				Header="Main Tab"
+				Background="#FF161616"
+				Style="{StaticResource Tab}">
+				<avalonEdit:TextEditor xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+					Name="AvalonEditor"
+					Margin="-2"
+					Grid.Row="1"
+					Background="#181818"
+					LineNumbersForeground="#FFFFFFFF"
+					ShowLineNumbers="True"
+					HorizontalScrollBarVisibility="Visible"
+					VerticalScrollBarVisibility="Visible"
+					Foreground="#FFFFFFFF"
+					Text=""
+					FontFamily="Consolas"
+					Grid.RowSpan="3" />
+			</TabItem>
+		</TabControl>
+		<Border
+			Name="Ma"
+			BorderBrush="#FF000000"
+			BorderThickness="0"
+			HorizontalAlignment="Left"
+			Height="336"
+			Margin="686, 436, 0, 0"
+			VerticalAlignment="Top"
+			Width="145"
+			Background="#151515">
+			<UIElement.Effect>
+				<DropShadowEffect
+					BlurRadius="52" />
+			</UIElement.Effect>
+			<Border
+				BorderBrush="#FF000000"
+				BorderThickness="0"
+				Margin="0,0,0,294"
+				Height="42"
+				Background="#161616" />
+		</Border>
+		<Button
+			Name="FPSRBLX"
+			Content="FPS RBLX"
+			HorizontalAlignment="Left"
+			Margin="930,278,0,0"
+			VerticalAlignment="Top"
+			Width="130"
+			Height="41"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontSize="20"
+			Style="{StaticResource SystemButton}"
+			Click="FPSRBLX_Click">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Unlock FPS Roblox" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Button
+			Name="Kill"
+			Content="Kill RBLX"
+			HorizontalAlignment="Left"
+			Margin="930,325,0,0"
+			VerticalAlignment="Top"
+			Width="130"
+			Height="40"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontSize="20"
+			Style="{StaticResource SystemButton}"
+			Click="Kill_Click">
+			<FrameworkElement.ContextMenu>
+				<ContextMenu
+					ToolTip="Close Roblox" />
+			</FrameworkElement.ContextMenu>
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Close Roblox" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Button
+			Name="JoinDis"
+			Content="Join Discord"
+			HorizontalAlignment="Left"
+			Margin="930,231,0,0"
+			VerticalAlignment="Top"
+			Width="130"
+			Height="41"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontSize="20"
+			Style="{StaticResource SystemButton}"
+			Click="JoinDis_Click">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Join Discord" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<Button
+			Name="scripth"
+			Content=""
+			HorizontalAlignment="Left"
+			Margin="507,90,0,0"
+			VerticalAlignment="Top"
+			Width="43"
+			Height="42"
+			Background="#00FFFFFF"
+			BorderThickness="0"
+			Foreground="#FFFFFFFF"
+			FontFamily="Segoe MDL2 Assets"
+			FontSize="20"
+			AutomationProperties.HelpText="Game Hub"
+			AutomationProperties.IsOffscreenBehavior="Onscreen"
+			AutomationProperties.IsRequiredForForm="True"
+			AutomationProperties.Name="Game Hub"
+			Style="{StaticResource SystemButton}"
+			Click="scripth_Click">
+			<FrameworkElement.ToolTip>
+				<StackPanel>
+					<TextBlock>
+						<Run
+							Text="Game Hub" />
+					</TextBlock>
+				</StackPanel>
+			</FrameworkElement.ToolTip>
+		</Button>
+		<CheckBox
+			Name="KrnlAPI"
+			Content="Auto Inject"
+			HorizontalAlignment="Left"
+			Margin="930, 91, 0, 0"
+			VerticalAlignment="Top"
+			Style="{StaticResource RoundCheckBox}"
+			FontSize="17"
+			Width="113"
+			Checked="KrnlAPI_Checked"
+			Unchecked="KrnlAPI_Unchecked" />
+		<Ellipse
+			Name="Minizame"
+			Fill="#FF202020"
+			HorizontalAlignment="Left"
+			Height="33"
+			Margin="568,44,0,0"
+			Stroke="#FF000000"
+			VerticalAlignment="Top"
+			Width="33"
+			StrokeThickness="0"
+			Cursor="Hand"
+			ToolTip="Minimized"
+			MouseLeftButtonDown="Minizame_MouseLeftButtonDown" />
+		<Ellipse
+			Name="Close"
+			Fill="#FF131313"
+			HorizontalAlignment="Left"
+			Height="33"
+			Margin="608,44,0,0"
+			Stroke="#FF000000"
+			VerticalAlignment="Top"
+			Width="33"
+			StrokeThickness="0"
+			Cursor="Hand"
+			ToolTip="Close"
+			MouseLeftButtonDown="closeapp" />
+	</Grid>
+</Window>

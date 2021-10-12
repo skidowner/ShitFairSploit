@@ -1,0 +1,101 @@
+<Window
+	x:Class="UnfairSploit.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:UnfairSploit"
+	Name="Windowxza"
+	Title="UnfairSploit"
+	Height="450"
+	Width="800"
+	AllowsTransparency="True"
+	WindowStyle="None"
+	Background="#00FFFFFF"
+	WindowStartupLocation="CenterScreen"
+	Topmost="True">
+	<Grid
+		Name="Gridz"
+		Loaded="Gridz_Loaded"
+		MouseDown="Gridz_MouseDown">
+		<Border
+			Name="Bborder"
+			BorderBrush="#FF000000"
+			BorderThickness="0"
+			HorizontalAlignment="Left"
+			Height="287"
+			Margin="204,73,0,0"
+			VerticalAlignment="Top"
+			Width="422"
+			Background="#151515">
+			<UIElement.Effect>
+				<DropShadowEffect
+					BlurRadius="50" />
+			</UIElement.Effect>
+		</Border>
+		<Border
+			BorderBrush="#FF000000"
+			BorderThickness="0"
+			HorizontalAlignment="Left"
+			Height="42"
+			Margin="204,73,0,0"
+			VerticalAlignment="Top"
+			Width="422"
+			Background="#171717" />
+		<Ellipse
+			Name="icoon"
+			HorizontalAlignment="Left"
+			Height="100"
+			Margin="366,-143,0,0"
+			Stroke="#FF000000"
+			VerticalAlignment="Top"
+			Width="100">
+			<Shape.Fill>
+				<ImageBrush
+					ImageSource="new epic.jpg" />
+			</Shape.Fill>
+		</Ellipse>
+		<ProgressBar
+			Name="thebar"
+			HorizontalAlignment="Left"
+			Height="39"
+			Margin="225,507,0,-96"
+			VerticalAlignment="Top"
+			Width="381"
+			BorderThickness="0"
+			Background="#FFF5F5F5"
+			Foreground="#FF1B1B1B"
+			Value="-1" />
+		<Label
+			Name="Unfa"
+			Content="Loading..."
+			HorizontalAlignment="Left"
+			Height="41"
+			VerticalAlignment="Top"
+			Width="381"
+			Foreground="#FFFFFFFF"
+			FontSize="20"
+			Margin="225,466,0,-57" />
+		<Ellipse
+			Name="Minimaze"
+			Fill="#FF202020"
+			HorizontalAlignment="Left"
+			Height="37"
+			Margin="850,75,0,0"
+			Stroke="#FF000000"
+			VerticalAlignment="Top"
+			Width="37"
+			StrokeThickness="0"
+			Cursor="Hand"
+			ToolTip="Minimized"
+			MouseLeftButtonDown="Minizame_MouseLeftButtonDown" />
+		<Ellipse
+			Name="Exit"
+			Fill="#FF131313"
+			HorizontalAlignment="Left"
+			Height="37"
+			Margin="880,75,0,0"
+			Stroke="#FF000000"
+			VerticalAlignment="Top"
+			Width="37"
+			StrokeThickness="0"
+			Cursor="Hand"
+			ToolTip="Close"
+			MouseLeftButtonDown="closeapp" />
+	</Grid>
+</Window>
